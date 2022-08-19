@@ -6,7 +6,7 @@
     "moduleResolution": "Node",
     "lib": ["DOM", "ESNext"],
     "strict": true,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "ts-node": {
     "compilerOptions": {
