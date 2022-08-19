@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
 
 export const App = () => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    window.myAPI.updateTitle(count);
+  }, [count]);
 
   return (
     <div className="container">

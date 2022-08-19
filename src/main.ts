@@ -1,5 +1,5 @@
 import path from 'path';
-import { BrowserWindow, app, session } from 'electron';
+import { BrowserWindow, app, session, ipcMain } from 'electron';
 import { searchDevtools } from 'electron-search-devtools';
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -20,6 +20,10 @@ app.whenReady().then(() => {
     webPreferences: {
       preload: path.resolve(__dirname, 'preload.js'),
     },
+  });
+
+  ipcMain.handle('update-title', (_e, arg) => {
+    mainWindow.setTitle(`Electron App: ${arg}`);
   });
 
   if (isDev) {
