@@ -1,4 +1,5 @@
 import { build } from 'esbuild';
+import { sassPlugin } from 'esbuild-sass-plugin';
 import { htmlPlugin } from '@craftamap/esbuild-plugin-html';
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -24,6 +25,7 @@ build({
   minify: !isDev,
   sourcemap: isDev,
   plugins: [
+    sassPlugin(),
     htmlPlugin({
       files: [
         {
