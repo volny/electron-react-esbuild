@@ -3,11 +3,11 @@
     "target": "ESNext",
     "module": "ESNext",
     "esModuleInterop": true,
+    "isolatedModules": true,
     "moduleResolution": "Node",
     "lib": ["DOM", "ESNext"],
     "strict": true,
-    "jsx": "react-jsx",
-    "isolatedModules": true
+    "jsx": "react-jsx"
   },
   "ts-node": {
     "compilerOptions": {
