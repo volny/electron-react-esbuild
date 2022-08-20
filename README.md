@@ -20,8 +20,14 @@ $ npm run dev
 
 # on production
 $ npm run build && npm run package
+```
 
-# unit test
+_If you want to clone the branch with [Jest](https://jestjs.io/ja/) and [Testing Library](https://testing-library.com/):_
+
+```sh
+$ git clone https://github.com/sprout2000/electron-react-esbuild.git -b jest
+
+# run the unit test
 $ npm test
 ```
 
